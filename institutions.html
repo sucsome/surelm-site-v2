@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>For banks &amp; insurers - SureLM | The AI copilot for insurance advisors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5f5e60",
+                        "primary-container": "#0066cc",
+                        "on-surface-variant": "#414753",
+                        "on-secondary-fixed-variant": "#474649",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#005cba",
+                        "on-primary-container": "#dfe8ff",
+                        "surface-container-high": "#e8e8ea",
+                        "background": "#f9f9fb",
+                        "inverse-on-surface": "#f0f0f2",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#e9e8ed",
+                        "surface-container-highest": "#e2e2e4",
+                        "inverse-surface": "#2f3132",
+                        "surface-variant": "#e2e2e4",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#aac7ff",
+                        "surface-container-low": "#f3f3f5",
+                        "on-background": "#1a1c1d",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#1b1b1d",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#c8c6c8",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f9f9fb",
+                        "primary": "#004e9f",
+                        "tertiary-fixed": "#e3e2e7",
+                        "surface": "#f9f9fb",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#00458e",
+                        "secondary-container": "#e2dfe1",
+                        "on-primary-fixed": "#001b3e",
+                        "on-surface": "#1a1c1d",
+                        "surface-container": "#eeeef0",
+                        "primary-fixed": "#d7e3ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#aac7ff",
+                        "surface-dim": "#d9dadc",
+                        "outline-variant": "#c1c6d5",
+                        "tertiary-container": "#68686d",
+                        "secondary-fixed": "#e4e2e4",
+                        "tertiary": "#4f5054",
+                        "on-tertiary-fixed-variant": "#46464b",
+                        "tertiary-fixed-dim": "#c7c6cb",
+                        "on-secondary-container": "#636264",
+                        "on-tertiary-fixed": "#1a1b1f",
+                        "outline": "#727784"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "40px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "display-xl": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["17px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["21px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+                        "display-lg": ["56px", { "lineHeight": "60px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #F5F5F7; color: #1a1c1d; -webkit-font-smoothing: antialiased; }
+        a:focus-visible, button:focus-visible { outline: none; box-shadow: 0 0 0 2px #004e9f; border-radius: 9999px; }
+        img { user-select: none; -webkit-user-drag: none; }
+        .window-dot { width: 12px; height: 12px; border-radius: 9999px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-display-lg text-headline-lg-mobile tracking-tighter text-on-surface dark:text-on-surface font-bold">SureLM</span>
+</a>
+<nav class="hidden sm:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-colors" href="advisor.html">Advisor</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-semibold" href="institutions.html">For banks &amp; insurers</a>
+</nav>
+<div>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim hover:text-primary-container dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer" href="#">Login</a>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-gap">
+<!-- 01 Hero -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center mt-12 md:mt-24 mb-section-gap">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-6">For banks &amp; insurers</span>
+<h1 class="font-display-lg text-display-lg tracking-tighter text-on-surface max-w-[800px] mb-6 text-balance">Build advisors who sell better and stay longer.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-[620px] mb-10 text-balance">SureLM helps financial institutions train, support and manage insurance advisors throughout their journey.</p>
+<div class="flex flex-col sm:flex-row items-center gap-6 mb-16 w-full justify-center">
+<a class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full font-label-md text-label-md transition-all duration-300 hover:bg-opacity-80 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] w-full sm:w-auto flex items-center justify-center gap-2" href="#">
+                        Talk to us
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="text-primary font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-1 group" href="#journey">
+                        Learn more
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)] p-6 md:p-10 text-left">
+<p class="font-label-md text-label-md text-secondary mb-8 text-center uppercase tracking-widest">How SureLM fits in</p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2">
+<div class="flex flex-col items-center gap-3 text-center w-full md:w-auto">
+<div class="w-20 h-20 rounded-3xl bg-surface-container flex flex-col items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant" data-icon="account_balance">account_balance</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Institution</p>
+</div>
+<span class="material-symbols-outlined text-2xl text-secondary rotate-90 md:rotate-0" data-icon="arrow_forward">arrow_forward</span>
+<div class="flex flex-col items-center gap-3 text-center w-full md:w-auto">
+<div class="w-20 h-20 rounded-3xl bg-primary-fixed flex flex-col items-center justify-center border border-primary-fixed-dim">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-primary">SureLM</p>
+</div>
+<span class="material-symbols-outlined text-2xl text-secondary rotate-90 md:rotate-0" data-icon="arrow_forward">arrow_forward</span>
+<div class="flex flex-col items-center gap-3 text-center w-full md:w-auto">
+<div class="w-20 h-20 rounded-3xl bg-surface-container flex flex-col items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant" data-icon="group">group</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Advisors</p>
+</div>
+<span class="material-symbols-outlined text-2xl text-secondary rotate-90 md:rotate-0" data-icon="arrow_forward">arrow_forward</span>
+<div class="flex flex-col items-center gap-3 text-center w-full md:w-auto">
+<div class="w-20 h-20 rounded-3xl bg-surface-container flex flex-col items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant" data-icon="diversity_3">diversity_3</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Customers</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 02 The problem -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap scroll-mt-32">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">Two problems hold insurance distribution back.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white rounded-3xl p-10 border border-outline-variant/30 flex flex-col items-start text-left">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="person_remove">person_remove</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-3 text-balance">Advisors leave.</h3>
+<p class="font-body-md text-body-md text-secondary">Institutions spend time and money training advisors, but many don't stay active.</p>
+</div>
+<div class="bg-white rounded-3xl p-10 border border-outline-variant/30 flex flex-col items-start text-left">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="warning">warning</span>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-3 text-balance">Customers get the wrong advice.</h3>
+<p class="font-body-md text-body-md text-secondary">Complex products and inconsistent guidance can lead to poor recommendations and mis-selling.</p>
+</div>
+</div>
+</section>
+<!-- 03 Help advisors sell the right way -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap scroll-mt-32" id="selling">
+<div class="text-center mb-14">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 inline-block">Help advisors sell the right way</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">Give every advisor the help they need to sell well.</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl mx-auto text-balance">SureLM puts the knowledge and guidance of the institution into every advisor's hands.</p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-12">
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Customer needs</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Policy knowledge</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Recommendation</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Conversation</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Sale</span>
+</div>
+<div class="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)] text-left">
+<div class="flex items-center gap-2 px-5 py-3 border-b border-outline-variant/20 bg-surface-container-low">
+<span class="window-dot bg-[#ff5f57]"></span>
+<span class="window-dot bg-[#febc2e]"></span>
+<span class="window-dot bg-[#28c840]"></span>
+<span class="ml-3 font-label-md text-label-md text-secondary">Copilot · Recommending for Priya</span>
+</div>
+<div class="grid md:grid-cols-2">
+<div class="p-6 md:p-8 border-b md:border-b-0 md:border-r border-outline-variant/20">
+<p class="font-label-md text-label-md text-primary uppercase tracking-widest mb-5">Customer</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">P</span>
+</div>
+<div>
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Priya Iyer</p>
+<p class="font-label-md text-label-md text-secondary">38 · works in a bank</p>
+</div>
+</div>
+<p class="font-label-md text-label-md text-secondary mb-3">ABOUT PRIYA</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="font-label-md text-label-md bg-surface-container rounded-full px-3 py-1 text-on-surface-variant">Married</span>
+<span class="font-label-md text-label-md bg-surface-container rounded-full px-3 py-1 text-on-surface-variant">Son, 8</span>
+</div>
+<p class="font-label-md text-label-md text-secondary mb-3">ALREADY COVERED</p>
+<div class="flex items-center justify-between gap-3 bg-surface-container-low rounded-xl border border-outline-variant/20 px-4 py-3 mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="health_and_safety">health_and_safety</span>
+<p class="font-body-md text-body-md text-on-surface">Health plan</p>
+</div>
+<span class="font-label-md text-label-md text-secondary">Renews in 6 weeks</span>
+</div>
+<p class="font-label-md text-label-md text-secondary mb-3">WHAT SHE NEEDS</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-md text-label-md bg-primary-fixed text-primary rounded-full px-3 py-1">Cover for her son</span>
+<span class="font-label-md text-label-md bg-primary-fixed text-primary rounded-full px-3 py-1">Stay within budget</span>
+</div>
+</div>
+<div class="p-6 md:p-8">
+<p class="font-label-md text-label-md text-primary uppercase tracking-widest mb-5">Copilot</p>
+<div class="space-y-4 mb-6">
+<div class="flex justify-end">
+<div class="max-w-[85%] bg-surface-container-high rounded-2xl rounded-tr-sm px-4 py-3">
+<p class="font-body-md text-body-md">Priya's plan renews soon. What should I recommend?</p>
+</div>
+</div>
+<div class="flex justify-start">
+<div class="max-w-[95%] bg-primary-fixed rounded-2xl rounded-tl-sm px-4 py-3">
+<p class="font-body-md text-body-md text-on-surface">A family floater would cover Priya and her son in one plan — for less than two separate plans. Here's a comparison:</p>
+</div>
+</div>
+</div>
+<div class="bg-white border border-outline-variant/30 rounded-2xl p-4 mb-4">
+<div class="flex items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="health_and_safety">health_and_safety</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Family Floater</p>
+<p class="font-label-md text-label-md text-secondary">Covers Priya + 1 · within budget</p>
+</div>
+</div>
+<span class="font-label-md text-label-md bg-primary-fixed text-primary rounded-full px-3 py-1">Recommended</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 p-4 mb-4">
+<p class="font-label-md text-label-md text-secondary mb-2">WHY THIS FITS PRIYA</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>One plan covers mother and son</li>
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>Fits her budget</li>
+<li class="flex items-start gap-2 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>Follows the right process</li>
+</ul>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low border border-outline-variant/30 rounded-full pl-4 pr-2 py-2">
+<span class="font-body-md text-body-md text-secondary truncate">Explain this to Priya in simple words…</span>
+<span class="material-symbols-outlined text-white bg-[#1D1D1F] rounded-full p-1.5 text-base ml-auto" data-icon="arrow_upward">arrow_upward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 04 Keep advisors supported -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap scroll-mt-32" id="support">
+<div class="text-center mb-14">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 inline-block">Keep advisors supported</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">Don't leave advisors on their own after training.</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl mx-auto text-balance">Training gets an advisor started. Continuous support helps them stay productive.</p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-12">
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Train</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Sell</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Get help</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Improve</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Keep selling</span>
+</div>
+<div class="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)] text-left">
+<div class="flex items-center gap-2 px-5 py-3 border-b border-outline-variant/20 bg-surface-container-low">
+<span class="window-dot bg-[#ff5f57]"></span>
+<span class="window-dot bg-[#febc2e]"></span>
+<span class="window-dot bg-[#28c840]"></span>
+<span class="ml-3 font-label-md text-label-md text-secondary">Copilot · Mid-conversation help</span>
+</div>
+<div class="p-6 md:p-8">
+<div class="space-y-4 max-w-2xl">
+<div class="flex justify-end">
+<div class="max-w-[90%] bg-surface-container-high rounded-2xl rounded-tr-sm px-4 py-3">
+<p class="font-body-md text-body-md">A customer just asked me what happens if she needs surgery abroad. What should I say?</p>
+</div>
+</div>
+<div class="flex justify-start">
+<div class="max-w-[95%] bg-primary-fixed rounded-2xl rounded-tl-sm px-4 py-3">
+<p class="font-body-md text-body-md text-on-surface">Good question. Here's a simple way to answer: most standard plans cover treatment in India; some cover emergency care abroad. Check whether her plan includes a global cover rider, and explain the difference in plain words.</p>
+</div>
+</div>
+<div class="flex justify-end">
+<div class="max-w-[90%] bg-surface-container-high rounded-2xl rounded-tr-sm px-4 py-3">
+<p class="font-body-md text-body-md">That helps. I'll walk her through it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 05 Manage the whole network -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap scroll-mt-32" id="network">
+<div class="text-center mb-14">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 inline-block">Manage the whole network</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">See what's happening across your advisor network.</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl mx-auto text-balance">See advisor activity, training progress, sales performance, customer activity and compliance — instead of managing everything blindly.</p>
+</div>
+<div class="w-full max-w-5xl mx-auto rounded-3xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)] text-left">
+<div class="flex items-center gap-2 px-5 py-3 border-b border-outline-variant/20 bg-surface-container-low">
+<span class="window-dot bg-[#ff5f57]"></span>
+<span class="window-dot bg-[#febc2e]"></span>
+<span class="window-dot bg-[#28c840]"></span>
+<span class="ml-3 font-label-md text-label-md text-secondary">Network overview</span>
+</div>
+<div class="p-6 md:p-8">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 p-4">
+<p class="font-label-md text-label-md text-secondary mb-1">Active advisors</p>
+<p class="font-display-lg text-display-lg text-on-surface">24</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 p-4">
+<p class="font-label-md text-label-md text-secondary mb-1">In training</p>
+<p class="font-display-lg text-display-lg text-on-surface">6</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 p-4">
+<p class="font-label-md text-label-md text-secondary mb-1">Sales this month</p>
+<p class="font-display-lg text-display-lg text-on-surface">38</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 p-4">
+<p class="font-label-md text-label-md text-secondary mb-1">Renewals coming up</p>
+<p class="font-display-lg text-display-lg text-on-surface">12</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 p-4">
+<p class="font-label-md text-label-md text-secondary mb-1">Compliance</p>
+<p class="font-display-lg text-display-lg text-on-surface">Clear</p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant/20 overflow-hidden">
+<div class="grid grid-cols-[1fr_auto_auto] gap-4 px-5 py-3 border-b border-outline-variant/20">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Advisor</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest hidden sm:block">Status</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Next action</span>
+</div>
+<div class="divide-y divide-outline-variant/20">
+<div class="grid grid-cols-[1fr_auto_auto] gap-4 px-5 py-3.5 items-center">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Ananya Rao</p>
+<span class="font-label-md text-label-md bg-primary-fixed text-primary rounded-full px-3 py-1 hidden sm:block">Active</span>
+<span class="font-label-md text-label-md text-secondary text-right">Renewal follow-up</span>
+</div>
+<div class="grid grid-cols-[1fr_auto_auto] gap-4 px-5 py-3.5 items-center">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Ravi Menon</p>
+<span class="font-label-md text-label-md bg-surface-container-highest text-on-surface-variant rounded-full px-3 py-1 hidden sm:block">In training</span>
+<span class="font-label-md text-label-md text-secondary text-right">Complete assessment</span>
+</div>
+<div class="grid grid-cols-[1fr_auto_auto] gap-4 px-5 py-3.5 items-center">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Sunita Kaur</p>
+<span class="font-label-md text-label-md bg-primary-fixed text-primary rounded-full px-3 py-1 hidden sm:block">Active</span>
+<span class="font-label-md text-label-md text-secondary text-right">Compliance check</span>
+</div>
+<div class="grid grid-cols-[1fr_auto_auto] gap-4 px-5 py-3.5 items-center">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Arun Patel</p>
+<span class="font-label-md text-label-md bg-error-container text-on-error-container rounded-full px-3 py-1 hidden sm:block">Needs help</span>
+<span class="font-label-md text-label-md text-secondary text-right">Support call</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 06 One system from onboarding to renewal -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap scroll-mt-32" id="journey">
+<div class="text-center mb-14">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 inline-block">One system, end to end</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">One system from onboarding to renewal.</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl mx-auto text-balance">SureLM stays with the advisor throughout their journey.</p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-12">
+<span class="font-label-md text-label-md bg-primary text-white rounded-full px-5 py-2">Onboard</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-primary text-white rounded-full px-5 py-2">Train</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-primary text-white rounded-full px-5 py-2">Sell</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-primary text-white rounded-full px-5 py-2">Manage</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="arrow_forward">arrow_forward</span>
+<span class="font-label-md text-label-md bg-primary text-white rounded-full px-5 py-2">Renew</span>
+</div>
+<div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Onboarding</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Training</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Assessments</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Advisor readiness</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">AI-assisted selling</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Customer management</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Compliance</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Follow-ups</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Renewals</span>
+<span class="font-label-md text-label-md bg-white border border-outline-variant/30 rounded-full px-4 py-1.5 text-on-surface">Network visibility</span>
+</div>
+</section>
+<!-- 07 Expand distribution -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap scroll-mt-32" id="expand">
+<div class="text-center mb-16">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 inline-block">Expand distribution</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">Make more people capable of selling insurance.</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl mx-auto text-balance">Give more people the training, tools and support to become capable advisors.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="school">school</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Students</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="work">work</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Gig workers</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="cottage">cottage</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Homemakers</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="storefront">storefront</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Local professionals</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="diversity_3">diversity_3</span>
+</div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Community members</p>
+</div>
+</div>
+</section>
+<!-- 08 Final CTA -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-white rounded-3xl border border-outline-variant/30 py-20 px-6 flex flex-col items-center text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">Build a stronger advisor network with SureLM.</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl mx-auto mb-8 text-balance">Help your advisors sell better, serve customers better and stay productive.</p>
+<div class="flex flex-col sm:flex-row items-center gap-6 justify-center">
+<a class="bg-[#1D1D1F] text-white px-10 py-4 rounded-full font-label-md text-label-md transition-all duration-300 hover:bg-opacity-80 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] flex items-center justify-center gap-2 w-full sm:w-auto" href="#">
+                            Talk to us
+                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="text-primary font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-1 group" href="advisor.html">
+                            Learn more about the advisor experience
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap mt-section-gap border-t border-outline-variant/20 bg-surface-container-lowest dark:bg-surface-dim">
+<div class="flex flex-col items-center justify-center space-y-gutter px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">SureLM</span>
+</div>
+<p class="font-body-md text-body-md text-secondary text-center max-w-md mb-10">The AI copilot for insurance advisors.</p>
+<nav class="flex flex-col md:flex-row items-center gap-8 mb-16">
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-all cursor-pointer flex items-center gap-1 group" href="advisor.html">
+                        Advisor
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1 group" href="institutions.html">
+                        Institution
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-all cursor-pointer flex items-center gap-1 group" href="#">
+                        Login
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</nav>
+<div class="flex flex-col md:flex-row items-center justify-between w-full pt-8 border-t border-outline-variant/10 gap-4">
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary transition-all" href="#">Terms of Service</a>
+</div>
+<p class="font-label-md text-label-md text-secondary">© 2026 SureLM. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
