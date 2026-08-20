@@ -23,7 +23,7 @@
 </header>
 <main class="pt-32 pb-section-gap">
 <!-- Hero Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center mt-12 md:mt-24 mb-section-gap">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-center text-center mt-12 md:mt-24 mb-section-gap bg-gradient-to-b from-primary/[0.03] to-transparent">
 <h1 class="font-display-lg text-display-lg tracking-tighter text-on-surface max-w-[800px] mb-6 text-balance">The AI copilot for insurance advisors.</h1>
 <p class="font-body-lg text-body-lg text-secondary max-w-[600px] mb-10 text-balance">Get the expertise you need, while you do the work.</p>
 <div class="flex flex-col sm:flex-row items-center gap-6 mb-10 w-full justify-center">
@@ -55,7 +55,14 @@
 </a>
 </div>
 </div>
-<div class="w-full md:w-1/2 order-1 md:order-2 rounded-2xl border border-outline-variant/30 bg-surface-container-lowest p-5 shadow-sm">
+<div class="w-full md:w-1/2 order-1 md:order-2 rounded-2xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-2 px-5 py-3 border-b border-outline-variant/20 bg-surface-container-low">
+<span class="window-dot bg-[#ff5f57]"></span>
+<span class="window-dot bg-[#febc2e]"></span>
+<span class="window-dot bg-[#28c840]"></span>
+<span class="ml-3 font-label-md text-label-md text-secondary">surelm.app</span>
+</div>
+<div class="p-5">
 <div class="flex justify-end mb-3">
 <div class="bg-surface-container-high rounded-2xl rounded-br-sm px-4 py-2.5 text-body-md text-on-surface max-w-[85%]">Which health plan suits a family of four?</div>
 </div>
@@ -63,7 +70,19 @@
 <div class="bg-primary-fixed rounded-2xl rounded-bl-sm px-4 py-2.5 text-body-md text-on-primary-fixed max-w-[85%]">Family Floater from Health First. Covers all four, no copay on diagnostics.</div>
 </div>
 <div class="flex justify-start">
-<div class="bg-primary-fixed rounded-2xl rounded-bl-sm px-4 py-2.5 text-body-md text-on-primary-fixed max-w-[85%]">Want me to start the proposal?</div>
+<div class="bg-primary-fixed rounded-2xl rounded-bl-sm px-4 py-3 max-w-[85%]">
+<div class="flex items-center justify-between gap-3 bg-white rounded-xl border border-outline-variant/30 px-4 py-2.5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-base" data-icon="health_and_safety">health_and_safety</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Family Floater · Health</p>
+<p class="font-label-md text-label-md text-secondary">Covers 4 · no copay</p>
+</div>
+</div>
+<span class="font-label-md text-label-md bg-primary-fixed text-primary rounded-full px-2.5 py-0.5">Recommended</span>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -86,7 +105,14 @@
 </a>
 </div>
 </div>
-<div class="w-full md:w-1/2 rounded-2xl border border-outline-variant/30 bg-surface-container-lowest p-5 shadow-sm">
+<div class="w-full md:w-1/2 rounded-2xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-2 px-5 py-3 border-b border-outline-variant/20 bg-surface-container-low">
+<span class="window-dot bg-[#ff5f57]"></span>
+<span class="window-dot bg-[#febc2e]"></span>
+<span class="window-dot bg-[#28c840]"></span>
+<span class="ml-3 font-label-md text-label-md text-secondary">Network overview</span>
+</div>
+<div class="p-5">
 <div class="grid grid-cols-[1fr_auto] gap-4 px-3 py-2 border-b border-outline-variant/20 mb-1">
 <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Advisor</span>
 <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Status</span>
@@ -107,6 +133,7 @@
 <div class="grid grid-cols-[1fr_auto] gap-4 px-3 py-2.5 items-center">
 <p class="font-label-md text-label-md font-semibold text-on-surface">Arun Patel</p>
 <span class="font-label-md text-label-md bg-error-container text-on-error-container rounded-full px-3 py-1">Needs help</span>
+</div>
 </div>
 </div>
 </div>
