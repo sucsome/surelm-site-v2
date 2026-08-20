@@ -9,13 +9,22 @@
 <link rel="stylesheet" href="assets/css/site.css"/>
 </head>
 <body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-white">
-<!-- TopAppBar JSON Component -->
 <header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
 <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
 <span class="font-display-lg text-headline-lg-mobile tracking-tighter text-on-surface dark:text-on-surface font-bold">SureLM</span>
 </div>
+<nav class="hidden sm:flex items-center gap-2">
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:bg-primary-fixed/50 rounded-full px-4 py-1.5 transition-all duration-300 flex items-center gap-1.5" href="advisor.html">
+<span class="material-symbols-outlined text-base" data-icon="forum">forum</span>
+For advisors
+</a>
+<a class="font-label-md text-label-md text-on-secondary-fixed-variant hover:text-primary hover:bg-primary-fixed/50 rounded-full px-4 py-1.5 transition-all duration-300 flex items-center gap-1.5" href="institutions.html">
+<span class="material-symbols-outlined text-base" data-icon="account_balance">account_balance</span>
+For banks &amp; insurers
+</a>
+</nav>
 <div>
 <a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim hover:text-primary-container dark:hover:text-primary-fixed transition-colors duration-300 cursor-pointer active:opacity-70 transition-opacity" href="#">Login</a>
 </div>
@@ -28,17 +37,20 @@
 <p class="font-body-lg text-body-lg text-secondary max-w-[600px] mb-10 text-balance">Get the expertise you need, while you do the work.</p>
 <div class="flex flex-col sm:flex-row items-center gap-6 mb-10 w-full justify-center">
 <a class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full font-label-md text-label-md transition-all duration-300 hover:bg-opacity-80 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] w-full sm:w-auto flex items-center justify-center gap-2" href="advisor.html">
-                    Become an advisor
-                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+Become an advisor
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="text-primary font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-1 group" href="institutions.html">
-                    For banks &amp; insurers
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+For banks &amp; insurers
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
 </a>
+</div>
+<div id="scroll-hint" class="chevron-bounce mt-4">
+<span class="material-symbols-outlined text-outline text-2xl" data-icon="expand_more">expand_more</span>
 </div>
 </section>
 <!-- For Insurance Advisors Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap" id="advisors">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap reveal" id="advisors">
 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
 <div class="w-full md:w-1/2 order-2 md:order-1 flex flex-col items-start">
 <span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4">For insurance advisors</span>
@@ -46,30 +58,49 @@
 <p class="font-body-md text-body-md text-secondary mb-8">Ask about customers, get recommendations, start policies — all in one place.</p>
 <div class="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
 <a class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full font-label-md text-label-md transition-all duration-300 hover:bg-opacity-80 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] flex items-center justify-center gap-2 w-full sm:w-auto" href="advisor.html">
-                            Become an advisor
-                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+Become an advisor
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="text-primary font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-1 group" href="advisor.html">
-                            Learn more
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+Learn more
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 </div>
-<div class="w-full md:w-1/2 order-1 md:order-2 rounded-2xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
+<div class="w-full md:w-1/2 order-1 md:order-2 mockup-window rounded-3xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)]">
 <div class="flex items-center gap-2 px-5 py-3 border-b border-outline-variant/20 bg-surface-container-low">
 <span class="window-dot bg-[#ff5f57]"></span>
 <span class="window-dot bg-[#febc2e]"></span>
 <span class="window-dot bg-[#28c840]"></span>
 <span class="ml-3 font-label-md text-label-md text-secondary">surelm.app</span>
 </div>
+<div class="grid md:grid-cols-[140px_1fr]">
+<div class="hidden md:flex flex-col gap-5 p-5 border-r border-outline-variant/20 bg-surface-container-low/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="security" data-weight="fill" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="font-label-md text-label-md font-bold text-on-surface text-sm">SureLM</span>
+</div>
+<div class="flex flex-col gap-3">
+<a class="flex items-center gap-2 font-label-md text-label-md text-secondary" href="#"><span class="material-symbols-outlined text-base" data-icon="dashboard">dashboard</span>Home</a>
+<a class="flex items-center gap-2 font-label-md text-label-md text-primary font-semibold bg-primary-fixed rounded-full px-2.5 py-1 -mx-2.5" href="#"><span class="material-symbols-outlined text-base" data-icon="forum">forum</span>Copilot</a>
+<a class="flex items-center gap-2 font-label-md text-label-md text-secondary" href="#"><span class="material-symbols-outlined text-base" data-icon="group">group</span>Customers</a>
+</div>
+</div>
 <div class="p-5">
 <div class="flex justify-end mb-3">
 <div class="bg-surface-container-high rounded-2xl rounded-br-sm px-4 py-2.5 text-body-md text-on-surface max-w-[85%]">Which health plan suits a family of four?</div>
 </div>
-<div class="flex justify-start mb-3">
+<div class="flex justify-start mb-3" id="ai-typing">
+<div class="bg-primary-fixed rounded-2xl rounded-bl-sm px-4 py-3 flex items-center gap-1.5">
+<span class="typing-dot w-2 h-2 rounded-full bg-primary"></span>
+<span class="typing-dot w-2 h-2 rounded-full bg-primary"></span>
+<span class="typing-dot w-2 h-2 rounded-full bg-primary"></span>
+</div>
+</div>
+<div class="flex justify-start" id="ai-response" style="opacity: 0; transform: translateY(6px);">
 <div class="bg-primary-fixed rounded-2xl rounded-bl-sm px-4 py-2.5 text-body-md text-on-primary-fixed max-w-[85%]">Family Floater from Health First. Covers all four, no copay on diagnostics.</div>
 </div>
-<div class="flex justify-start">
+<div class="flex justify-start mt-3" id="ai-card" style="opacity: 0; transform: translateY(6px);">
 <div class="bg-primary-fixed rounded-2xl rounded-bl-sm px-4 py-3 max-w-[85%]">
 <div class="flex items-center justify-between gap-3 bg-white rounded-xl border border-outline-variant/30 px-4 py-2.5">
 <div class="flex items-center gap-3">
@@ -86,26 +117,12 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <!-- For Banks & Insurers Section -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap" id="institutions">
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap reveal" id="institutions">
 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
-<div class="w-full md:w-1/2 flex flex-col items-start">
-<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4">For banks &amp; insurers</span>
-<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">Give every advisor the knowledge and support to sell well.</h2>
-<p class="font-body-md text-body-md text-secondary mb-8">Advisors sell with AI support. You see what's happening across the network.</p>
-<div class="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
-<a class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full font-label-md text-label-md transition-all duration-300 hover:bg-opacity-80 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] flex items-center justify-center gap-2 w-full sm:w-auto" href="institutions.html">
-                            Talk to us
-                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</a>
-<a class="text-primary font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-1 group" href="institutions.html">
-                            Learn more
-                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-<div class="w-full md:w-1/2 rounded-2xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
+<div class="w-full md:w-1/2 order-1 mockup-window rounded-3xl overflow-hidden border border-outline-variant/30 bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.12)]">
 <div class="flex items-center gap-2 px-5 py-3 border-b border-outline-variant/20 bg-surface-container-low">
 <span class="window-dot bg-[#ff5f57]"></span>
 <span class="window-dot bg-[#febc2e]"></span>
@@ -113,6 +130,18 @@
 <span class="ml-3 font-label-md text-label-md text-secondary">Network overview</span>
 </div>
 <div class="p-5">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 bg-primary-fixed/60 rounded-full px-3 py-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-primary font-medium">3 active</span>
+</div>
+<div class="flex items-center gap-1.5 bg-error-container/60 rounded-full px-3 py-1">
+<span class="w-2 h-2 rounded-full bg-error pulse-badge"></span>
+<span class="font-label-md text-label-md text-on-error-container font-medium">1 needs help</span>
+</div>
+</div>
+</div>
 <div class="grid grid-cols-[1fr_auto] gap-4 px-3 py-2 border-b border-outline-variant/20 mb-1">
 <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Advisor</span>
 <span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Status</span>
@@ -132,15 +161,33 @@
 </div>
 <div class="grid grid-cols-[1fr_auto] gap-4 px-3 py-2.5 items-center">
 <p class="font-label-md text-label-md font-semibold text-on-surface">Arun Patel</p>
-<span class="font-label-md text-label-md bg-error-container text-on-error-container rounded-full px-3 py-1">Needs help</span>
+<span class="font-label-md text-label-md bg-error-container text-on-error-container rounded-full px-3 py-1 pulse-badge">Needs help</span>
 </div>
 </div>
+<div class="flex items-center justify-between mt-4 pt-3 border-t border-outline-variant/20">
+<span class="font-label-md text-label-md text-secondary">Showing 4 of 30 advisors</span>
+<span class="material-symbols-outlined text-secondary text-base" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-2 flex flex-col items-start">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4">For banks &amp; insurers</span>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 text-balance">Give every advisor the knowledge and support to sell well.</h2>
+<p class="font-body-md text-body-md text-secondary mb-8">Advisors sell with AI support. You see what's happening across the network.</p>
+<div class="flex flex-col sm:flex-row items-center gap-6 w-full sm:w-auto">
+<a class="bg-[#1D1D1F] text-white px-8 py-4 rounded-full font-label-md text-label-md transition-all duration-300 hover:bg-opacity-80 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-8px_rgba(0,0,0,0.3)] flex items-center justify-center gap-2 w-full sm:w-auto" href="institutions.html">
+Talk to us
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="text-primary font-label-md text-label-md hover:opacity-80 transition-opacity flex items-center gap-1 group" href="institutions.html">
+Learn more
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
 </div>
 </div>
 </div>
 </section>
 </main>
-<!-- Footer JSON Component -->
 <footer class="w-full py-section-gap border-t border-outline-variant/20 bg-surface-container-lowest dark:bg-surface-dim">
 <div class="flex flex-col items-center justify-center space-y-gutter px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
 <div class="flex items-center gap-2 mb-4">
@@ -150,16 +197,16 @@
 <p class="font-body-md text-body-md text-secondary text-center max-w-md mb-10">The AI copilot for insurance advisors.</p>
 <nav class="flex flex-col md:flex-row items-center gap-8 mb-16">
 <a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-all cursor-pointer flex items-center gap-1 group" href="advisor.html">
-                    Advisor
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+Advisor
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-all cursor-pointer flex items-center gap-1 group" href="institutions.html">
-                    Institution
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+Institution
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="font-label-md text-label-md text-on-secondary-fixed-variant dark:text-on-tertiary-fixed-variant hover:text-primary dark:hover:text-primary-fixed transition-all cursor-pointer flex items-center gap-1 group" href="#">
-                    Login
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+Login
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </nav>
 <div class="flex flex-col md:flex-row items-center justify-between w-full pt-8 border-t border-outline-variant/10 gap-4">
@@ -171,4 +218,92 @@
 </div>
 </div>
 </footer>
+<script>
+(function(){
+  /* Scroll-reveal: fade in sections as they enter the viewport */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reveals.length && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(function(el) { io.observe(el); });
+  } else {
+    reveals.forEach(function(el) { el.classList.add('visible'); });
+  }
+
+  /* Typing dots → response reveal on advisor mockup */
+  var typing = document.getElementById('ai-typing');
+  var response = document.getElementById('ai-response');
+  var card = document.getElementById('ai-card');
+  if (typing && response) {
+    setTimeout(function() {
+      typing.style.transition = 'opacity 0.3s ease';
+      typing.style.opacity = '0';
+      setTimeout(function() {
+        typing.style.display = 'none';
+        response.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        response.style.opacity = '1';
+        response.style.transform = 'translateY(0)';
+        if (card) {
+          setTimeout(function() {
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 250);
+        }
+      }, 300);
+    }, 1800);
+  }
+
+  /* Hide scroll chevron once user scrolls past hero */
+  var hint = document.getElementById('scroll-hint');
+  if (hint && 'IntersectionObserver' in window) {
+    var heroObs = new IntersectionObserver(function(entries) {
+      if (!entries[0].isIntersecting) {
+        hint.style.transition = 'opacity 0.4s ease';
+        hint.style.opacity = '0';
+        setTimeout(function() { hint.style.display = 'none'; }, 400);
+        heroObs.disconnect();
+      }
+    }, { threshold: 0.1 });
+    var hero = hint.closest('section');
+    if (hero) heroObs.observe(hero);
+  }
+
+  /* Scroll-compressed gaps: sections pull closer as you scroll past */
+  var compressSections = document.querySelectorAll('main > section');
+  var COMPRESS_MIN = 100;
+  var COMPRESS_MAX = 160;
+
+  function updateCompression() {
+    var vh = window.innerHeight;
+    for (var i = 0; i < compressSections.length; i++) {
+      var section = compressSections[i];
+      if (!section.nextElementSibling) continue;
+      var rect = section.getBoundingClientRect();
+      var scrolledPast = Math.max(0, -rect.top);
+      var progress = Math.min(1, scrolledPast / section.offsetHeight);
+      var margin = COMPRESS_MAX - (progress * (COMPRESS_MAX - COMPRESS_MIN));
+      section.style.marginBottom = margin + 'px';
+    }
+  }
+
+  var compressionTicking = false;
+  window.addEventListener('scroll', function() {
+    if (!compressionTicking) {
+      requestAnimationFrame(function() {
+        updateCompression();
+        compressionTicking = false;
+      });
+      compressionTicking = true;
+    }
+  }, { passive: true });
+  updateCompression();
+})();
+</script>
 </body></html>
